@@ -1,0 +1,8 @@
+from IPython.display import SVG
+from keras.utils.vis_utils import model_to_dot
+from keras.models import *
+
+model = load_model("models/inceptionV3-imagenet-finetune{}.h5".format(fine_tune_layer))
+print("load successed")
+
+#SVG(model_to_dot(model).create(prog='dot', format='svg'))
